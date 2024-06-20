@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The magnificent 7:"
+        android:textColor="#000000"
+        android:background="#BEBEBE"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Seven Boxes with Space Between -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="7"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/apple"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/microsoft"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="MSFT"
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/google"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="GOOGL"
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/amazon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="AMZN"
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/meta"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="META"
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/nvidia"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="NVDA"
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tesla"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="TSLA"
+            android:textColor="#FFFFFF"
+            android:background="#BEBEBE"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Bottom Button -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#BEBEBE"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Exit"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:onClick="exitMag"/>
+
+</LinearLayout>
