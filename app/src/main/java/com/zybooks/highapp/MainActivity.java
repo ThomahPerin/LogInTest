@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView stockPriceTextView;
 
+    private Button goToRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         Retrofit retrofit = RetrofitClient.getClient(BASE_URL);
         stockApiService = retrofit.create(StockApiService.class);
+        goToRegister = findViewById(R.id.registerButton);
 
         getStockPrice("AAPL");  // Example for Apple Inc.
     }
@@ -60,6 +63,18 @@ public class MainActivity extends AppCompatActivity {
                 // Handle failure
             }
         });
+    }
+
+    public void goToRegister(View v){
+        Log.i(TAG, "Going from main to register");
+        Intent goToRegister = new Intent(this, RegisterActivity.class);
+        startActivity(goToRegister);
+    }
+
+    public void goToLogin(View v){
+        Log.i(TAG, "Going from main to login");
+        Intent goToLogin = new Intent(this, LoginActivity.class);
+        startActivity(goToLogin);
     }
 
     public void goToMag7(View v){
