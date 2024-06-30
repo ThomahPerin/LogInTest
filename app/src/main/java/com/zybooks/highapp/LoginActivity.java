@@ -33,8 +33,9 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
 
-        Retrofit retrofit = RetrofitClient.getClient("http://10.0.2.2:3000/");
-        apiService = retrofit.create(ApiService.class);
+        Retrofit getLocalUrl = RetrofitClientServer.callGetClient();
+        Log.i(TAGgen, "Login retrofit created");
+        apiService = getLocalUrl.create(ApiService.class);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

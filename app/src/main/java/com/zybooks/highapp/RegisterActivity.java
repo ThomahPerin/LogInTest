@@ -32,9 +32,9 @@ public class RegisterActivity extends AppCompatActivity {
         Log.i(TAGgen, "Register on create called");
 
         //Retrofit retrofit = RetrofitClient.getClient("https://yourserver.com/");
-        Retrofit retrofit = RetrofitClient.getClient("http://10.0.2.2:3000/");
+        Retrofit getLocalUrl = RetrofitClientServer.callGetClient();
         Log.i(TAGgen, "Register retrofit created");
-        apiService = retrofit.create(ApiService.class);
+        apiService = getLocalUrl.create(ApiService.class);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
